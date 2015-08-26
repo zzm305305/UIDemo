@@ -6,49 +6,95 @@
         <link type="text/css" rel="stylesheet" href="../css/demo/angular.css"/>
         <script type="text/javascript" src="../js/angular.js"></script>
     </head>
-    <body>
+    <body ng-app="myApp">
         <header>
             <h2><a href="javascript:;"><img class="logo" src="../image/logo_1.jpg" alt="logo"></a><span>欢迎登陆后台UI系统</span></h2>
         </header>
-        <div class="content" ng-app="myApp">
-            <div class="login_wrap">
-                <form action="" method="get" accept-charset="utf-8" novalidate ng-controller="formConFun" id="J_form">
+        <div class="content">
+            <div class="login_wrap" ng-controller="formConFun">
+                <form action="" method="get" accept-charset="utf-8" novalidate id="J_form" name="appForm" novalidate ng-submit="submitFun(appForm.$valid)">
                     <div class="item">
-                        <p><label class="lab">账户：</label></p>
-                        <p><input type="text" autofocus="autofocus" name="email" ng-change="iptChange()" placeholder="请输入账户名或邮箱地址" ng-model='init.mailText'></p>
-                        <ul class="mail_list" ng-show="init.isShow"><li ng-repeat="item in init.mailArr" ng-bind="init.mailText+item"></li></ul>
+                        <p><label class="lab">账户：</label><span class="error ng-hide" ng-show="init.mailShow">账户不能为空</span></p>
+                        <p><input type="text" autocomplete="off" autofocus="autofocus" name="email"  placeholder="请输入账户名或邮箱地址" ng-model='init.mailText' required></p>
+                        <ul class="mail_list ng-hide" ng-show="init.isShow"><li ng-repeat="item in init.mailArr" ng-bind="(init.mailText | uppercase)+item"></li></ul>
                     </div>
                     <div class="item">
-                        <p><label class="lab">密码：</label></p>
-                        <p><input type="password" name="password" placeholder="请输密码" ng-model='init.pwdText'></p>
+                        <p><label class="lab">密码：</label><span class="error ng-hide" ng-show="init.pwdShow">密码不能为空</span></p>
+                        <p><input type="password" name="password" placeholder="请输入密码" ng-model='init.pwdText' required maxlength="10"></p>
                     </div>
                     <div class="item">
-                        <a href="javascript:;" class="action_btn sure">确定</a><a href="javascript:;" class="action_btn reset" ng-click="reset()">重置</a>
+                        <a href="javascript:;" class="action_btn sure" ng-click="submitFun(appForm.$valid)">确定</a><a href="javascript:;" class="action_btn reset" ng-click="reset()">重置</a>
                     </div>
                 </form>
             </div>
         </div>
+        <footer>
+            <div class="footmenu" ng-controller="footDataFun">
+              <a ng-repeat="item in items | orderBy:'name'"  href="{{item.link}}" rel="nofollow" title="{{item.name}}" rseat="{{item.name}}" target="_blank" ng-cloak>
+                 {{item.name}} <i class="cutline " ng-if="!$last">|</i><!--{{$last==true?'last':''}}-->
+              </a>
+            </div>
+           <!--  <div ng-include="'anjular-footer.html'"></div> -->
+        </footer>
     </body>
      <script type="text/javascript">
-     var myAppFun = angular.module('myApp',["formController"]);
+     var myAppFun = angular.module('myApp',["formController","footController"]);
      var formModule  = angular.module('formController',[]);
+     var footModule = angular.module('footController',[]);
      var initData =  {
             mailText:"",
             pwdText:"",
             isShow:false,
+            mailShow:false,
+            pwdShow:false,
             mailArr:['@126.com','@163.com','@qiyi.com','@qq.com','@sina.com']
-     }; 
+     };
      formModule.controller('formConFun',function ($scope){
         $scope.init = initData;
-        iptChange = function(){
-            $scope.init.isShow = $scope.init.mailText===""?false:true;
-        };
-        $scope.$watch('init.mailText',iptChange);
+        $scope.$watch(function(){
+             if($scope.init.mailText){
+                $scope.init.isShow = true
+                $scope.init.mailShow = false;
+             }else{
+                $scope.init.isShow = false;
+             }
+             if($scope.init.pwdText){
+                 $scope.init.pwdShow = false;
+             }
+        });
         /* 提交重置方法 */
         $scope.reset = function() {
-            initData.mailText = "";
-            initData.pwdText = "";
-        }
+             $scope.init.mailText = "";
+             $scope.init.pwdText = "";
+        };
+        $scope.submitFun = function(isValid) {
+            if(!isValid){
+                if(!$scope.init.mailText){
+                    $scope.init.mailShow = true;
+                }
+                if(!$scope.init.pwdText){
+                    $scope.init.pwdShow = true;
+                }
+            }else{
+                alert('登陆成功')
+            }
+        };
+     });
+     /*  底部信息 */
+     footModule.controller('footDataFun',function($scope){
+        $scope.items = [
+            {name:"公司介绍",link:"http://www.iqiyi.com/common/aboutus.html"},
+            {name:"新闻动态",link:"http://www.iqiyi.com/common/news.html"},
+            {name:"联系方式",link:"http://www.iqiyi.com/common/contactus.html"},
+            {name:"招聘英才",link:"http://zhaopin.iqiyi.com"},
+            {name:"爱奇艺实验室",link:"http://labs.iqiyi.com"},
+            {name:"开放平台",link:"http://open.iqiyi.com/"},
+            {name:"应用商店",link:"http://store.iqiyi.com/"},
+            {name:"爱奇艺论坛",link:"http://bbs.iqiyi.com/"},
+            {name:"帮助与反馈",link:"http://www.iqiyi.com/common/helpandsuggest.html?entry=yedi"},
+            {name:"侵权投诉",link:"http://www.iqiyi.com/common/copyright.html?entry=iqiyi"},
+            {name:"About Us",link:"http://www.iqiyi.com/common/20100420/n4813.html"}
+        ]
      });
     </script>
 </html>

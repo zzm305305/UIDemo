@@ -1,7 +1,7 @@
 /* 
 * @Author: zzhang
 * @Date:   2015-08-21 16:22:11
-* @Last Modified time: 2015-08-24 15:00:01
+* @Last Modified time: 2015-08-26 18:50:09
 */
 body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td { margin: 0;padding: 0}
 ul,ol {list-style: none}
@@ -22,10 +22,10 @@ header{background: #eee;height:100px;line-height: 100px;vertical-align: middle;t
 header h2{position:relative;width: 54%;font-weight: normal;font-size:30px;color: #699f00;}
 header h2 img{width:180px;height:100px;}
 header h2 span{position: absolute;margin-left: 25px;}
-.content{width: 1000px;margin:0 auto;}
+.content{width: 1000px;margin:0 auto;margin-top: 60px;}
 .content .login_wrap{width:700px;margin: 0 auto;}
 .content .login_wrap .item{margin-top: 30px;}
-.content .login_wrap input{width:60%;height: 25px;line-height: 25px;padding:5px;border:1px solid #699f00;border-radius: 5px;color:#555;}
+.content .login_wrap input{width:60%;height: 25px;margin-top: 5px;line-height: 25px;padding:5px;border:1px solid #699f00;border-radius: 5px;color:#555;}
 .content .login_wrap .lab{font-size: 16px;color: #699f00;}
 .content .login_wrap .mail_list{position: relative;top: 3px;width:61.5%;border: 1px solid #699f00;}
 .content .login_wrap .mail_list li{height: 25px;line-height: 25px; margin-top: 5px;padding-left: 5px;}
@@ -34,3 +34,9 @@ header h2 span{position: absolute;margin-left: 25px;}
 .content .login_wrap .reset{border-color: #ddd;background: #ddd;color: #555}
 .content .login_wrap .action_btn:hover{opacity: 0.8}
 .content .login_wrap .sure{margin-left: 100px;}
+.content .error{color:#f30;}
+.footmenu{position: absolute;bottom: 10px;text-align: center;width: 95%;}
+.footmenu i.last{display: none}
+.footmenu a{color: #555;}
+.footmenu a:hover{color:#699f00;}
+.footmenu i{font-style: normal;margin: 0 5px;}
