@@ -1,0 +1,18 @@
+body{font:12px/1.5 Tahoma,Helvetica,Arial,"\5FAE\8F6F\96C5\9ED1",sans-serif;background: #fff;}
+.ui-login.middle-box{width:400px;margin:50px auto 0 auto;text-align: center;}
+.ui-login .iqiyi_logo{width:240px;height:81px;}
+.ui-login .logo-box{margin:40px auto;}
+.ui-login .form-group{margin:25px 0;}
+.ui-login .btn-primary {width:100%;background-color: #7ab900;border-color: #7ab900;color: #FFFFFF;}
+.ui-login .form-control:focus,.single-line:focus {border-color: #7ab900 !important;}
+.ui-login .btn-primary.active,.btn-primary.focus,.btn-primary:active,.btn-primary:focus,.btn-primary:hover,.open>.dropdown-toggle.btn-primary {
+    background-color: #7ab900;
+    border-color: #7ab900;
+    color: #FFFFFF;
+    opacity: 0.8;
+}
+.ui-login .forget_pwd{color:#09f;}
+.ui-login .error{color: #f00;margin-bottom:10px;text-align: left;font-weight: normal;}
+.ui-login .text-muted{margin-top:10px;}
+.qiyi_form{position: relative;}
+.qiyi_form .qiyi_error{position: absolute;top:8px;right:20px;}

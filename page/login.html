@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <title>爱奇艺后台管理系统 - 登录</title>
+    <link rel="shortcut icon" href="http://www.qiyipic.com/common/images/logo.ico" type="image/icon"/>
+    <meta name="keywords" content="爱奇艺后台管理系统">
+    <meta name="description" content="爱奇艺后台管理系统">
+    <link href="../css/bootstrap/bootstrap-3.3.4.css" rel="stylesheet">
+    <link href="../css/bootstrap/font-awesome.css" rel="stylesheet">
+    <link href="../css/bootstrap/animate.css" rel="stylesheet">
+    <link href="../css/style_iqiyi.css" rel="stylesheet">
+    <script type="text/javascript" src="../js/angular.js"></script>
+</head>
+<!-- gray-bg -->
+<body ng-app="myApp">
+    <div class="ui-login middle-box loginscreen  animated fadeInDown">
+        <div ng-controller="formConFun">
+            <div class="logo-box">
+                <img class="iqiyi_logo" src="../image/iqiyi_logo.jpg" alt="logo">
+            </div>
+            <h3>欢迎登陆爱奇艺后台管理系统</h3>
+            <form class="m-t" action="" method="get" accept-charset="utf-8" novalidate id="J_form" name="appForm" novalidate ng-submit="submitFun(appForm.$valid)">
+                <div class="form-group qiyi_form">
+                    <p class="error ng-hide qiyi_error" ng-show="init.mailShow">账户不能为空</p>
+                   <input type="text" class="form-control" autocomplete="off" autofocus="autofocus" name="email"  placeholder="请输入账户名或邮箱地址" ng-model='init.mailText' required>
+                </div>
+                <div class="form-group qiyi_form">
+                    <p class="error ng-hide qiyi_error" ng-show="init.pwdShow">密码不能为空</p>
+                    <input type="password" class="form-control" placeholder="请输入密码" ng-model='init.pwdText' required maxlength="10">
+                </div>
+                <a href="javascript:;" class="btn btn-primary block full-width m-b" ng-click="submitFun(appForm.$valid)">登 陆</a>
+                <div class="text-muted text-right"> 
+                    <a href="login.html"><small class="forget_pwd">忘记密码了？</small></a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+     var myAppFun = angular.module('myApp',["formController","footController"]);
+     var formModule  = angular.module('formController',[]);
+     var footModule = angular.module('footController',[]);
+     var initData =  {
+            mailText:"",
+            pwdText:"",
+            isShow:false,
+            mailShow:false,
+            pwdShow:false,
+            mailArr:['@126.com','@163.com','@qiyi.com','@qq.com','@sina.com']
+     };
+     formModule.controller('formConFun',function ($scope){
+        $scope.init = initData;
+        $scope.$watch(function(){
+             if($scope.init.mailText){
+                $scope.init.isShow = true
+                $scope.init.mailShow = false;
+             }else{
+                $scope.init.isShow = false;
+             }
+             if($scope.init.pwdText){
+                 $scope.init.pwdShow = false;
+             }
+        });
+        /* 提交重置方法 */
+        $scope.reset = function() {
+             $scope.init.mailText = "";
+             $scope.init.pwdText = "";
+        };
+        $scope.submitFun = function(isValid) {
+            if(!isValid){
+                if(!$scope.init.mailText){
+                    $scope.init.mailShow = true;
+                }
+                if(!$scope.init.pwdText){
+                    $scope.init.pwdShow = true;
+                }
+            }else{
+                alert('登陆成功')
+            }
+        };
+     });
+    </script>
+
+</body>
+
+</html>
