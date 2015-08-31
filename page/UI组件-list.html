@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="renderer" content="webkit">
+        <title>UI组件库</title>
+        <link rel="shortcut icon" href="http://www.qiyipic.com/common/images/logo.ico" type="image/icon"/>
+        <link href="../css/bootstrap/bootstrap-3.3.4.css" rel="stylesheet">
+        <style>
+            body{font:12px/1.5 Tahoma,Helvetica,Arial,"\5FAE\8F6F\96C5\9ED1",sans-serif;color:#555;}
+            input{border:0;outline: none;}
+            .conent{width: 1000px;margin:0 auto;background: #fff;}
+            .conent h2{text-align: center;color: #555;font-weight: normal;}
+            .conent .item{margin:30px;font-size: 14px;}
+            .conent .item input{border:1px solid #ccc;border-radius: 3px;padding:3px 3px;height:34px;line-height: 30px;min-width:250px;}
+            .conent .item input:focus,.conent .item .ipt_green{border-color:  #7ab900;}
+            .conent .item .ipt_error{border-color: #f30}
+            .conent .item .cnt{margin: 10px 0 0 20px;}
+            .conent .item .btn-success,.btn-success.active,.btn-success.focus,.btn-success:active,.btn-success:focus{background-color: #7ab900;border-color: #7ab900;}
+            .btn-group-lg>.btn, .btn-lg{padding: 6px 12px;font-size: 14px}
+            .conent .item a:hover, .conent .item .btn:hover{opacity: 0.8}
+            .progress-bar{background-color: #7ab900;}
+            .dropdown-toggle{background-color: #7ab900;color:#fff;}
+            .dropdown-toggle:focus,.dropdown-toggle:hover{background-color: #7ab900;color:#fff;}
+            .dropdown-menu {border-color:#7ab900 }
+            .dropdown-menu>li>a {color: #555;}
+            .dropdown-menu>li>a:focus,.dropdown-menu>li>a:hover {color: #fff; text-decoration: none; background-color: #7ab900}
+            .input-group{width:500px;}
+            .pagination{margin:0px;}
+            .pagination>li>a, .pagination>li>span{color:#7ab900;}
+            .label{font-size: 14px;border-radius:4px;font-weight: normal; padding: 5px 8px;}
+            .close{float: left;color:#7ab900;opacity: 1}
+            .close:focus,.close:hover { color: #548C00;}
+            .table-bordered {border-color: #7ab900;}
+            .table-bordered>tbody>tr>td,.cnt-right .table-bordered>tbody>tr>th,.cnt-right  .table-bordered>tfoot>tr>td,.cnt-right  .table-bordered>tfoot>tr>th,.cnt-right  .table-bordered>thead>tr>td,.table-bordered>thead>tr>th {
+             border: 1px solid #7ab900;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="conent">
+            <h2>UI 组件交互样式测试版</h2>
+            <div class="item">
+                 <p>输入框</p>
+                 <div class="cnt"><span>默认样式：</span><input  type="text" placeholder="我是文本框"/></div>
+                 <div class="cnt"><span>得到焦点：</span><input class="ipt_green" type="text" placeholder="我得到了焦点"/></div>
+                 <div class="cnt"><span>错误提示：</span><input class="ipt_error" type="text" placeholder="我是错误提示"/></div>
+            </div>
+            <div class="item">
+                 <p>表格</p>
+                 <div class="cnt">
+                     <table class="table table-bordered">
+                       <caption>边框表格布局</caption>
+                       <thead>
+                          <tr>
+                             <th>名称</th>
+                             <th>城市</th>
+                             <th>密码</th>
+                          </tr>
+                       </thead>
+                       <tbody>
+                          <tr>
+                             <td>Tanmay</td>
+                             <td>Bangalore</td>
+                             <td>560001</td>
+                          </tr>
+                          <tr>
+                             <td>Sachin</td>
+                             <td>Mumbai</td>
+                             <td>400003</td>
+                          </tr>
+                          <tr>
+                             <td>Uma</td>
+                             <td>Pune</td>
+                             <td>411027</td>
+                          </tr>
+                     </tbody>
+                    </table>
+                 </div>
+            </div>
+            <div class="item">
+                 <p>标签</p>
+                 <div class="cnt">
+                    <span class="label label-default">默认标签</span>
+                    <span class="label label-primary">主要标签</span>
+                    <span class="label label-success">成功标签</span>
+                    <span class="label label-info">信息标签</span>
+                    <span class="label label-warning">警告标签</span>
+                    <span class="label label-danger">危险标签</span>
+                 </div>
+            </div>
+            <div class="item">
+                <p>按钮演示</p>
+                <div class="cnt"><span>操作按钮：</span> <a class="btn btn-success" href="javascript:;">确定</a></div>
+                <div class="cnt"><span>取消按钮：</span> <button type="button" class="btn">取消</button></div>
+                <div class="cnt"><span>禁用按钮：</span> <a href="#" class="btn btn-default btn-lg disabled" role="button">禁用</a></div>
+            </div>
+            <div class="item">
+                <p>进度条</p>
+                <div class="cnt">
+                    <div class="progress">
+                       <div class="progress-bar" role="progressbar" aria-valuenow="60" 
+                          aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                          <span class="sr-only">40% 完成</span>
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <p>下拉菜单</p>
+                <div class="cnt">
+                   <div class="dropdown">
+                       <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" 
+                          data-toggle="dropdown">
+                          主题
+                          <span class="caret"></span>
+                       </button>
+                       <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                          <li role="presentation">
+                             <a role="menuitem" tabindex="-1" href="#">Java</a>
+                          </li>
+                          <li role="presentation">
+                             <a role="menuitem" tabindex="-1" href="#">数据挖掘</a>
+                          </li>
+                          <li role="presentation">
+                             <a role="menuitem" tabindex="-1" href="#">
+                                数据通信/网络
+                             </a>
+                          </li>
+                          <li role="presentation">
+                             <a role="menuitem" tabindex="-1" href="#">
+                                前端开发
+                             </a>
+                          </li>
+                       </ul>
+                    </div>
+                </div>
+            </div>  
+            <div class="item">
+                 <p>搜索组件</p>
+                 <div class="input-group">
+                   <input type="text" class="form-control" placeholder="请输入搜索内容">
+                   <span class="input-group-btn">
+                      <button class="btn btn-success" type="button">
+                         搜索
+                      </button>
+                   </span>
+                </div>
+            </div> 
+            <div class="item">
+                 <p>翻页组件</p>
+                 <ul class="pagination">
+                  <li><a href="#">&laquo;</a></li>
+                  <li><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><a href="#">&raquo;</a></li>
+                </ul>
+            </div> 
+             <div class="item">
+                 <p>关闭按钮</p>
+                 <button type="button" class="close" aria-hidden="true">&times;</button>
+            </div>     
+        </div>
+    </body>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+   <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+</html>

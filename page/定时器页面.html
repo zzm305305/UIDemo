@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>WEBTest系统</title>
+        <link rel="shortcut icon" href="http://www.qiyipic.com/common/images/logo.ico" type="image/icon"/>
+        <meta name="keywords" content="WEBTest系统">
+        <meta name="description" content="WEBTest系统">
+        <link href="../css/bootstrap/bootstrap-3.3.4.css" rel="stylesheet">
+        <link href="../css/timer_iqiyi.css" rel="stylesheet">
+        <script type="text/javascript" src="../js/angular.js"></script>
+    </head>
+    <body ng-app="myApp">
+        <header class="header">
+            <div class="container">
+                <div class="logo"><img src="../image/wt-ico.png" title="WEBTest系统"></div>  
+                <div class="brand">WebPageTest
+                </div>
+                <div class="site-nav site-navbar">
+                    <a href="../page/login.html">用户名</a>
+                    <a href="../page/login.html">登录</a>
+                    <a href="../page/login.html">退出</a>
+                </div>
+                <i class="fa fa-bars m-icon-nav"></i>
+            </div>
+        </header>
+        <div class="pageheader">
+            <div class="container">
+                <h1>WebTest检测平台首页</h1>
+                <div>速度决定胜负！！</div>
+            </div>
+        </div>
+        <div class="content container">
+            <div class="nav-left">
+                <ul class="affix-top">
+                    <li><a href="javascript:;">首页</a></li>
+                    <li><a href="javascript:;">定时页面</a></li>
+                    <li><a href="javascript:;">图形界面</a></li>
+                    <li><a href="javascript:;">分析界面</a></li>
+                    <li><a href="javascript:;">数据统计</a></li>
+                    <li><a href="javascript:;">图形界面</a></li>
+                    <li><a href="javascript:;">首页</a></li>
+                    <li><a href="javascript:;">定时页面</a></li>
+                    <li><a href="javascript:;">图形界面</a></li>
+                </ul>
+            </div>
+            <div class="cnt-right">
+                <div class="row">
+                    <div class="qiyi_select">
+                        <form>
+                            <div class="col-xs-3 col-md-3">
+                                 <span>日期组件预留：</span>
+                            </div>
+                            <div class="col-xs-3 col-md-3">
+                                <select class="form-control">
+                                  <option>10:00</option>
+                                  <option>16:00</option>
+                                  <option>18:00</option>
+                                  <option>20:00</option>
+                                  <option>24:00</option>
+                                </select>
+                            </div>
+                            <div class="col-xs-3 col-md-3">
+                                <input type="text" class="form-control" placeholder="请输入检测地址">
+                            </div>
+                            <div class="col-xs-3 ccol-md-3">
+                                 <a href="javascript:;" class="btn btn-default add">新增</a>
+                                 <button type="submit" class="btn btn-default">搜索</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="table-responsive">
+                       <table class="table table-bordered qiyi_table">
+                        <thead>
+                          <tr>
+                            <th></th>
+                            <th>监测开始时间</th>
+                            <th>监测时间点</th>
+                            <th>监测地址</th>
+                            <th>添加人员</th>
+                            <th>操作</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>2015-08-29</td>
+                            <td>10:00</td>
+                            <td><a href="http://www.iqiyi.com">http://www.iqiyi.com</a></td>
+                            <td>shery</td>
+                            <td class="operBtn"><a>编辑</a><a>删除</a><a>查看</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>2015-08-24</td>
+                            <td>23:00</td>
+                            <td><a href="http://www.pps.tv">http://www.pps.tv</a></td>
+                            <td>guoguo</td>
+                            <td class="operBtn"><a>编辑</a><a>删除</a><a>查看</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>2015-08-20</td>
+                            <td>17:00</td>
+                            <td><a href="http://www.iqiyi.com">http://www.iqiyi.com</a></td>
+                            <td>herry</td>
+                            <td class="operBtn"><a>编辑</a><a>删除</a><a>查看</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>2015-08-29</td>
+                            <td>10:00</td>
+                            <td><a href="http://www.iqiyi.com">http://www.iqiyi.com</a></td>
+                            <td>shery</td>
+                            <td class="operBtn"><a>编辑</a><a>删除</a><a>查看</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>2015-08-24</td>
+                            <td>23:00</td>
+                            <td><a href="http://www.pps.tv">http://www.pps.tv</a></td>
+                            <td>guoguo</td>
+                            <td class="operBtn"><a>编辑</a><a>删除</a><a>查看</a></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>2015-08-20</td>
+                            <td>17:00</td>
+                            <td><a href="http://www.iqiyi.com">http://www.iqiyi.com</a></td>
+                            <td>herry</td>
+                            <td class="operBtn"><a>编辑</a><a>删除</a><a>查看</a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <footer>
+            <div class="footmenu" ng-controller="footDataFun">
+              <a ng-repeat="item in items | orderBy:'name'"  href="{{item.link}}" rel="nofollow" title="{{item.name}}" rseat="{{item.name}}" target="_blank" ng-cloak>
+                 {{item.name}} <i class="cutline " ng-if="!$last">|</i>
+              </a>
+            </div>
+         </footer>
+        <script type="text/javascript" src="../js/app.js"></script>
+        <script type="text/javascript" src="../js/controller/formCtrl.js"></script>
+    </body>
+</html>
