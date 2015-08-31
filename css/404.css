@@ -1,0 +1,93 @@
+body {
+    font-family: "Helvetica Neue","Helvetica","Lucida Grande","Arial","Hiragino Sans GB","Microsoft Yahei","WenQuanYi Micro Hei","sans-serif"
+}
+.site-notice {
+    padding: 5px 0;
+    text-align: center;
+    background-color: #7ab900
+}
+.site-notice a {
+    color: #eee
+}
+
+.site-notice a:hover {
+    color: #fff
+}
+
+.site-notice em {
+    font-style: normal
+}
+.site-header {
+    position: relative;
+    text-align: center;
+    background-color: #fff;
+    color: #fff;
+    margin-bottom: 0
+}
+@media screen and (min-width: 768px) {
+    .site-header h1 {
+        font-size:50px
+    }
+}
+
+.site-header p {
+    color: #f4f4f4
+}
+.site-header .fa {
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    color: #eee;
+    font-size: 24px
+}
+.site-header .form-group {
+    position: relative;
+    margin-top: 40px
+}
+.site-header .search {
+    border: 2px solid #7ab900;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-size: 16px;
+    padding: 13px 30px;
+    border-radius: 0;
+    height: auto;
+    text-align: center
+}
+.site-header .search:focus {
+    border-color: #208d4e
+}
+
+.site-header .search+.fa.onX {
+    cursor: pointer
+}
+
+.site-header span {
+    font-size: 14px
+}
+
+.package-info {
+    color: #777
+}
+  .fourofour .fourofour-container h1 {
+      color:#7ab900;
+      font-size: 200px;
+      font-weight: 100;
+      text-shadow: #33b361 1px 1px, #33b361 2px 2px, #33b361 3px 3px, #33b361 4px 4px, #33b361 5px 5px, #33b361 6px 6px, #33b361 7px 7px,
+      #33b361 8px 8px, #33b361 9px 9px, #33b361 10px 10px, #33b361 11px 11px, #33b361 12px 12px, #33b361 13px 13px, #33b361 14px 14px
+      }
+.fourofour .fourofour-container h2 {
+      color:#7ab900;
+      font-size: 32px;
+      font-weight: 100;
+      margin-bottom: 40px; }
+  .fourofour .fourofour-container a.btn {
+      border-color:  #7ab900;
+      background-color: #7ab900;
+      color: white; }
+  .fourofour .fourofour-container a.btn:hover {
+        opacity: 0.8;
+      }
+
+.icon-home:before {
+  content: "\f015"; }
