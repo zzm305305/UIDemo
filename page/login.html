@@ -12,7 +12,7 @@
     <link href="../css/bootstrap/font-awesome.css" rel="stylesheet">
     <link href="../css/bootstrap/animate.css" rel="stylesheet">
     <link href="../css/style_iqiyi.css" rel="stylesheet">
-    <script type="text/javascript" src="../lib/angular.js"></script>
+    <script type="text/javascript" src="../js/angular.js"></script>
 </head>
 <!-- gray-bg -->
 <body ng-app="myApp">
@@ -38,6 +38,14 @@
             </form>
         </div>
     </div>
+    <footer>
+        <div class="footmenu" ng-controller="footDataFun">
+          <a ng-repeat="item in items | orderBy:'name'"  href="{{item.link}}" rel="nofollow" title="{{item.name}}" rseat="{{item.name}}" target="_blank" ng-cloak>
+             {{item.name}} <i class="cutline " ng-if="!$last">|</i><!--{{$last==true?'last':''}}-->
+          </a>
+        </div>
+       <!--  <div ng-include="'anjular-footer.html'"></div> -->
+    </footer>
     <script type="text/javascript" src="../js/app.js"></script>
     <script type="text/javascript" src="../js/controller/formCtrl.js"></script>
     <script type="text/javascript" src="../js/service/dataService.js"></script>

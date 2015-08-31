@@ -16,3 +16,8 @@ body{font:12px/1.5 Tahoma,Helvetica,Arial,"\5FAE\8F6F\96C5\9ED1",sans-serif;back
 .ui-login .text-muted{margin-top:10px;}
 .qiyi_form{position: relative;}
 .qiyi_form .qiyi_error{position: absolute;top:8px;right:20px;}
+.footmenu{position: absolute;bottom: 10px;text-align: center;width: 95%;}
+.footmenu i.last{display: none}
+.footmenu a{color: #555;}
+.footmenu a:hover{color:#699f00;}
+.footmenu i{font-style: normal;margin: 0 5px;}

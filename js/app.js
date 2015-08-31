@@ -1,0 +1,1 @@
+var myAppFun = angular.module('myApp',[]);
