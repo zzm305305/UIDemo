@@ -1,7 +1,7 @@
 /* 
 * @Author: chenting
 * @Date:   2015-08-31 16:41:05
-* @Last Modified time: 2015-08-31 18:02:58
+* @Last Modified time: 2015-08-31 18:34:35
 */
 body{font:12px/1.5 Tahoma,Helvetica,Arial,"\5FAE\8F6F\96C5\9ED1",sans-serif}
 ul,li,ol{border:0;outline: none;list-style: none;margin:0;padding: 0}
@@ -92,3 +92,4 @@ ul,li,ol{border:0;outline: none;list-style: none;margin:0;padding: 0}
 }
 .cnt-right  a{color:#09f}
 .cnt-right  .add{margin-right:15px;}
+.cnt-right .row{margin:0;}
