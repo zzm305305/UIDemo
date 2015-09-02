@@ -37,12 +37,30 @@
             .table-bordered>tbody>tr>td,.cnt-right .table-bordered>tbody>tr>th,.cnt-right  .table-bordered>tfoot>tr>td,.cnt-right  .table-bordered>tfoot>tr>th,.cnt-right  .table-bordered>thead>tr>td,.table-bordered>thead>tr>th {
              border: 1px solid #7ab900;
             }
+            /*skin-blue*/
+            .skin-blue .conent .item input:focus,.skin-blue .conent .item .ipt_green{border-color:  #09f;}
+            .skin-blue  .conent .item input:focus,.skin-blue .conent .item .ipt_green{border-color:  #09f;}
+            .skin-blue .conent .item .btn-success,.skin-blue .btn-success.active,.skin-blue .btn-success.focus,.skin-blue .btn-success:active, .skin-blue .btn-success:focus{background-color: #09f;border-color: #09f;}
+             .skin-blue .progress-bar{background-color: #09f;}
+             .skin-blue .dropdown-toggle{background-color: #09f;}
+            .skin-blue .dropdown-toggle:focus,.dropdown-toggle:hover{background-color: #09f;}
+            .skin-blue .dropdown-menu {border-color:#09f }
+            .skin-blue .dropdown-menu>li>a:focus,.skin-blue  .dropdown-menu>li>a:hover {background-color: #09f;}
+            .skin-blue .pagination>li>a,.skin-blue .pagination>li>span{color:#09f;}
+            .skin-blue .close{float: left;color:#09f;}
+            .skin-blue .table-bordered {border-color: #09f;}
+            .skin-blue .table-bordered>tbody>tr>td,.skin-blue .cnt-right .table-bordered>tbody>tr>th,.skin-blue .cnt-right  .table-bordered>tfoot>tr>td,.skin-blue .cnt-right  .table-bordered>tfoot>tr>th,.skin-blue .cnt-right  .table-bordered>thead>tr>td,.skin-blue .table-bordered>thead>tr>th {
+             border: 1px solid #09f;
+            }
 
         </style>
     </head>
     <body>
         <div class="conent">
             <h2>UI 组件交互样式测试版</h2>
+            <div class="item">
+                <a class="btn btn-success" href="javascript:;" onclick="changeSkin()">换肤</a>
+            </div>
             <div class="item">
                  <p>输入框</p>
                  <div class="cnt"><span>默认样式：</span><input  type="text" placeholder="我是文本框"/></div>
@@ -170,4 +188,10 @@
     </body>
     <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+   <script>
+    var doc = document;
+    function changeSkin(){
+        doc.body.className="skin-blue";
+    }
+   </script>
 </html>
